@@ -1,6 +1,4 @@
-﻿
-
-
+﻿using System.Linq;
 
 var vGList = new List<string>();
 
@@ -13,10 +11,6 @@ vGList.Add("Contra");
 vGList.Add("Super Mario Bros");
 vGList.Add("Twisted Metal");
 
-
-
-
-//Order the list of games by length of the game name.
-//Use the lambda expression in this exercise as well.
-//use Method Syntax for this exercise
-
+vGList.OrderBy(vGList => vGList.Length)
+      .ToList()
+      .ForEach(vGList => Console.WriteLine(vGList));
